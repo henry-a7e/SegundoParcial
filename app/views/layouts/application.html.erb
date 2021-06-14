@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcial2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">TURNOS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/medical_centers">medical_center</a>
+            <a class="nav-link" href="/guards">guards</a>
+            <a class="nav-link" href="/appointments">appointments</a>
+            <a class="nav-link" href="/workers">Doctores</a>
+            <a class="nav-link" href="/worker_types">worker_types</a>
+            <a class="nav-link" href="/medical_center_types">medical_center_types</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <%= link_to "center_types", medical_center_types_path%>
+    <%= link_to "guards", guards_path%>
+    <%= link_to "appointments", appointments_path%>
+    <%= link_to "appointments", workers_path%>
+    <%= link_to "workers_types", worker_types_path%>
+    <%= link_to "medical_center_types", medical_centers_path%>
+    <%= yield %>
+  </body>
+</html>
